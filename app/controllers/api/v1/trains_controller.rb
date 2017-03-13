@@ -12,7 +12,7 @@ class Api::V1::TrainsController < ApiController
 	end
 
 	def show
-		@train = Train.find_by_number( params[:id] )
+		@train = Train.find_by_number!( params[:train_number] )
 
 		render :json => {
 			:number => @train.number,
