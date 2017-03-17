@@ -22,11 +22,7 @@ class Api::V1::UsersController < ApiController
 	protected
 
 	def user_params
-		{
-			:email => params[:email],
-			:avatar => params[:avatar],
-			:password => params[:password]
-		}.reject{ |k,v| v.blank? }
+		params.permit(:email, :password, :avatar)
 	end
 
 end
