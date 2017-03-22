@@ -17,6 +17,14 @@ RSpec.describe "API_V1::Auth", :type => :request do
     expect(response.body).to eq( { :user_id => new_user.id }.to_json )
   end
 
+  example "register failed" do
+    post "/api/v1/signup", params: { :email => "test2@example.com" }
+
+    expect(response).to have_http_status(400)
+
+    expect(response.body).to eq( { :message => "Failed", :errors => {:password => ["can't be blank"]}  }.to_json )
+  end
+
   example "valid login and logout" do
 
     post "/api/v1/login", params: { :auth_token => @user.authentication_token, :email => @user.email, :password => "12345678" }
