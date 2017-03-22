@@ -17,8 +17,8 @@ RSpec.describe "API_V1::Users", :type => :request do
        {
         :email => @user.email,
         :avatar => @user.avatar,
-        :updated_at => @user.updated_at.as_json,
-        :created_at => @user.created_at.as_json
+        :updated_at => @user.updated_at,
+        :created_at => @user.created_at
       }.to_json )
   end
 

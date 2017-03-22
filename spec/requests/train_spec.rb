@@ -27,13 +27,13 @@ RSpec.describe "API_V1::Trains", :type => :request do
           "logo_file_size": nil,
           "logo_content_type": nil,
           "available_seats": ["1A","1B","1C","2A","2B","2C","3A","3B","3C","4A","4B","4C","5A","5B","5C","6A","6B","6C"],
-          "created_at": @train1.created_at.as_json },
+          "created_at": @train1.created_at },
         { "number": @train2.number,
           "logo_url": nil,
           "logo_file_size": nil,
           "logo_content_type": nil,
           "available_seats": ["1A","1B","1C","2A","2B","2C","3A","3B","3C","4A","4B","4C","5A","5B","5C","6A","6B","6C"],
-          "created_at": @train2.created_at.as_json }
+          "created_at": @train2.created_at }
       ]
     }
     expect(response.body).to eq( expected_result.to_json )
@@ -50,7 +50,7 @@ RSpec.describe "API_V1::Trains", :type => :request do
           "logo_file_size": nil,
           "logo_content_type": nil,
           "available_seats": ["1A","1B","1C","2A","2B","2C","3A","3B","3C","4A","4B","4C","5A","5B","5C","6A","6B","6C"],
-          "created_at": @train1.created_at.as_json }
+          "created_at": @train1.created_at }
 
     expect(response.body).to eq( expected_result.to_json )
   end

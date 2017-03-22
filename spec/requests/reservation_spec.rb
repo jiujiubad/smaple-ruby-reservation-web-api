@@ -68,7 +68,7 @@ RSpec.describe "API_V1::Reservations", :type => :request do
                                      :logo_file_size => nil,
                                      :logo_content_type => nil,
                                      :available_seats => ["1B","1C","2A","2B","2C","3A","3B","3C","4A","4B","4C","5A","5B","5C","6A","6B","6C"],
-                                     :created_at => @train1.created_at.as_json
+                                     :created_at => @train1.created_at
                                    },
                                    :seat_number => @reservation.seat_number,
                                    :customer_name => @reservation.customer_name,
@@ -123,7 +123,7 @@ RSpec.describe "API_V1::Reservations", :type => :request do
                                            :logo_file_size => nil,
                                            :logo_content_type => nil,
                                            :available_seats => ["2A","2B","2C","3A","3B","3C","4A","4B","4C","5A","5B","5C","6A","6B","6C"],
-                                           :created_at => @train1.created_at.as_json
+                                           :created_at => @train1.created_at
                                          },
                                          :seat_number => @reservation1.seat_number,
                                          :customer_name => @reservation1.customer_name,
@@ -137,7 +137,7 @@ RSpec.describe "API_V1::Reservations", :type => :request do
                                            :logo_file_size => nil,
                                            :logo_content_type => nil,
                                            :available_seats => ["2A","2B","2C","3A","3B","3C","4A","4B","4C","5A","5B","5C","6A","6B","6C"],
-                                           :created_at => @train1.created_at.as_json
+                                           :created_at => @train1.created_at
                                          },
                                          :seat_number => @reservation2.seat_number,
                                          :customer_name => @reservation2.customer_name,
