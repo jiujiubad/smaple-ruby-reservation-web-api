@@ -31,24 +31,23 @@ RSpec.describe "API_V1::Auth", :type => :request do
 
     expect(response).to have_http_status(200)
 
-    user = User.last
-
     expect(response.body).to eq(
       {
         :message => "Ok",
-        :auth_token => user.authentication_token,
-        :user_id => user.id
+        :auth_token => @user.authentication_token,
+        :user_id => @user.id
       }.to_json
     )
-
 
     post "/api/v1/logout"
     expect(response).to have_http_status(401)
 
-
-    post "/api/v1/logout", params: { :auth_token => user.authentication_token }
+    post "/api/v1/logout", params: { :auth_token => @user.authentication_token }
     expect(response).to have_http_status(200)
-    expect(User.last.authentication_token).not_to eq(user.authentication_token)
+
+    old_token = @user.authentication_token
+    @user.reload
+    expect(@user.authentication_token).not_to eq(old_token)
   end
 
   example "invalid auth token login" do
