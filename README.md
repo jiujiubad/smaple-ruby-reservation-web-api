@@ -1,24 +1,5 @@
-# README
+# 全栈-Web API 设计实作-天气系统-订票系统
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+天气系统：https://xiaochu.ga/Content/1010.html
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+订票系统：https://xiaochu.ga/Content/1017.html
